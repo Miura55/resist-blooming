@@ -99,13 +99,9 @@ export default {
     },
     methods: {
         initializeLiff: function () {
-            var me = this
             liff.init(
                 {
                     liffId: process.env.VUE_APP_LIFF_ID
-                },
-                data => {
-                    me.loginCheck()
                 },
                 err => {
                     console.log('LIFF initialization failed', err)
@@ -149,7 +145,7 @@ export default {
                 this.$router.push({ name: 'Login' })
             }
         },
-        send: function (e) {
+        send: function () {
             console.log(this.reqParam);
 
             this.axios.post(
