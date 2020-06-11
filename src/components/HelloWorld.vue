@@ -21,7 +21,8 @@ export default {
       var me = this
       liff.init(
         {
-          liffId: process.env.VUE_APP_LIFF_ID
+          // liffId: process.env.VUE_APP_LIFF_ID
+          liffId: '1653851902-lV2nJOb2'
         },
         data => {
           if (liff.isLoggedIn()) {
