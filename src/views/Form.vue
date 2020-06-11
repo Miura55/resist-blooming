@@ -173,6 +173,7 @@ export default {
             if (liff.isLoggedIn()) {
                 liff.logout()
                 this.$router.push({ name: 'Login' })
+                location.reload();
             }
         },
         send: function () {
