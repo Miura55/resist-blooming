@@ -21,7 +21,9 @@ export default {
       var me = this
       liff.init(
         {
+          // test
           // liffId: process.env.VUE_APP_LIFF_ID
+          // build
           liffId: '1653851902-lV2nJOb2'
         },
         data => {

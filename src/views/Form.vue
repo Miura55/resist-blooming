@@ -80,15 +80,19 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label for="phoneNumber" class="col-4 control-label">電話番号</label>
+                <label for="phoneNumber" class="col-4 control-label">電話番号(携帯)</label>
                 <input type="tel" name="phoneNumber" id="phoneNumber" v-model="reqParam.phoneNumber" class="form-control col-4">
             </div>
             <div class="form-group row">
-                <label for="startDate" class="col-4 control-label">開始希望日</label>
+                <label for="phoneNumber" class="col-4 control-label">メールアドレス</label>
+                <input type="text" name="eMail" id="eMail" v-model="reqParam.eMail" class="form-control col-4">
+            </div>
+            <div class="form-group row">
+                <label for="startDate" class="col-4 control-label">活動開始希望日</label>
                 <input type="date" name="startDate" id="startDate" v-model="reqParam.startDate" class="form-control col-5">
             </div>
             <div class="form-group row">
-                <label for="endDate" class="col-4 control-label">終了希望日</label>
+                <label for="endDate" class="col-4 control-label">活動終了希望日</label>
                 <input type="date" name="endDate" id="endDate" v-model="reqParam.endDate" class="form-control col-5">
             </div>
         </form>
@@ -115,6 +119,7 @@ export default {
                 region: '',
                 city: '',
                 phoneNumber: '',
+                eMail: '',
                 startDate: '',
                 endDate: '',
             }
@@ -127,7 +132,9 @@ export default {
         initializeLiff: function () {
             liff.init(
                 {
+                    // test
                     // liffId: process.env.VUE_APP_LIFF_ID
+                    // deploy
                     liffId: "1653851902-lV2nJOb2"
                 },
                 data => {
