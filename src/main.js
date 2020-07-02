@@ -17,7 +17,6 @@ Vue.config.productionTip = false
 Vue.use(VueSwal)
 
 // axisの仕様
-Vue.use(BootstrapVue)
 Vue.use(VueAxios, axios)
 
 // BootstrapVueの使用
