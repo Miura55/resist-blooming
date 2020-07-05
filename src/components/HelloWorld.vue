@@ -1,11 +1,10 @@
 <template>
   <v-container>
-    <v-layout
-      text-center
-      wrap
-    >
+    <v-layout text-center wrap>
       <v-flex xs12>
-        <h3><button class="btn btn-success" @click="loginAction">LINEログイン</button></h3>
+        <h3>
+          <button class="btn btn-success" @click="loginAction">LINEログイン</button>
+        </h3>
       </v-flex>
     </v-layout>
   </v-container>
@@ -13,36 +12,36 @@
 
 <script>
 export default {
-  created () {
-    this.initializeLiff()
+  created() {
+    this.initializeLiff();
   },
   methods: {
-    initializeLiff: function () {
-      var me = this
+    initializeLiff: function() {
+      var me = this;
       liff.init(
         {
           // test
           // liffId: process.env.VUE_APP_LIFF_ID
           // build
-          liffId: '1653851902-lV2nJOb2'
+          liffId: "1653851902-lV2nJOb2"
         },
         data => {
           if (liff.isLoggedIn()) {
             // ログイン済み
-            me.$router.push({ name: 'form' })
+            me.$router.push({ name: "form" });
           }
         },
         err => {
-          console.log('LIFF initialization failed', err)
+          console.log("LIFF initialization failed", err);
         }
-      )
+      );
     },
-    loginAction: function () {
+    loginAction: function() {
       // ログインまだ
       if (!liff.isLoggedIn()) {
-        liff.login()
+        liff.login();
       }
     }
   }
-}
+};
 </script>
